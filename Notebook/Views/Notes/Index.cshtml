@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Notebook.Models;
+@model List<Notebook.Models.Note>;
+
+<h1>Notes</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No notes have been added yet!</h3>
+} 
+
+@foreach (Note note in Model)
+{
+  <li>@Html.ActionLink($"{note.Description}", "Details", new { id = note.NoteId })</li>
+}
+
+<p>@Html.ActionLink("Add new note", "Create")</p>
