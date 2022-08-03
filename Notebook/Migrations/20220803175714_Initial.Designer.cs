@@ -8,8 +8,8 @@ using Notebook.Models;
 namespace Notebook.Migrations
 {
     [DbContext(typeof(NotebookContext))]
-    [Migration("20220802184353_Done")]
-    partial class Done
+    [Migration("20220803175714_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,9 +61,6 @@ namespace Notebook.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<bool>("Done")
-                        .HasColumnType("tinyint(1)");
 
                     b.HasKey("NoteId");
 
