@@ -8,8 +8,8 @@ using Notebook.Models;
 namespace Notebook.Migrations
 {
     [DbContext(typeof(NotebookContext))]
-    [Migration("20220803221153_ExtraNoteFields")]
-    partial class ExtraNoteFields
+    [Migration("20220803222500_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -3,12 +3,12 @@ div#footer {
   bottom:0px;
   left:0px;
   width:100%;
-  color: rgb(0, 0, 0);
-  background:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  background-color:rgb(255, 94, 0);
   padding:8px;
-  border-color:rgb(127, 127, 127);
+  border-color:rgb(255, 94, 0);
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
 }
 
 div#header {
@@ -20,12 +20,13 @@ div#header {
   color: rgb(0, 0, 0);
   background:rgb(255, 255, 255);
   padding:15px;
+  padding-left: 35px;
   font-family: 'Mulish', sans-serif;
   font-weight: 900;
   font-size: 75px;
-  border-color:rgb(127, 127, 127);
+  /* border-color:rgb(255, 94, 0);
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px; */
 }
 
 h1 {
@@ -57,7 +58,7 @@ a:visited {
 }
 
 a:hover {
-  color:rgb(127, 127, 127);
+  color:rgb(247, 118, 43);
   text-decoration: none;
 }
 
@@ -81,18 +82,18 @@ main {
   background:rgb(255, 255, 255);
   padding: 35px;
   border-radius: 5px;
-  border-color:rgb(127, 127, 127);
+  border-color:rgb(255, 94, 0);
   border-style: solid;
   border-width: 3px;
 }
 
 .btn {
-  background:rgb(255, 255, 255);
-  border-radius: 15px;
-  border-color:rgb(127, 127, 127);
-  border-style: solid;
-  border-width: 2px;
-  color: black;
+  background:rgb(255, 94, 0);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  border-color:rgb(255, 255, 255);
+  border-style: double;
+  border-width: 1px;
 }
 
 
