@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-  <NoteGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2" />
-  </NoteGroup>
+  </ItemGroup>
 
   <NoteGroup>
     <ProjectReference Include="..\Notebook\Notebook.csproj" />  

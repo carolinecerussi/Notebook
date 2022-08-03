@@ -4,19 +4,37 @@
 
 @model Notebook.Models.Note
 
+@* <!-- 
+@using PatientTracker.Models;
+@model List<PatientTracker.Models.Patient>; 
+--> *@
+
 <h2>Edit</h2>
 
-<h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Edit this note: @Html.DisplayFor(model => model.NoteTitle)</h4>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.NoteId)
 
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.NoteTitle)
+    @Html.EditorFor(model => model.NoteTitle)
 
-    @Html.Label("Select category")
-    @Html.DropDownList("CategoryId")
+    @Html.LabelFor(model => model.NoteContent)
+    @Html.EditorFor(model => model.NoteContent)
+ 
+    @Html.Label("Select Categories")
+@* 
+    @foreach (Category category in @Model.Category)
+    {
+      @Html.CheckBoxFor(model => model.Name)
+      <li>@Html.ActionLink($"{category.Name}", "Details", "Categories", new { id = category.CategoryId })</li>
+    }
+</ol> *@
+
+    @Html.EditorFor(model => model.NoteDate, new { @type = "date" })
+//added to edit date//
+
 
     <input type="submit" value="Save" />
 }

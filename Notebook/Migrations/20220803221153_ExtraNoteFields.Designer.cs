@@ -8,8 +8,8 @@ using Notebook.Models;
 namespace Notebook.Migrations
 {
     [DbContext(typeof(NotebookContext))]
-    [Migration("20220803175714_Initial")]
-    partial class Initial
+    [Migration("20220803221153_ExtraNoteFields")]
+    partial class ExtraNoteFields
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,6 +58,12 @@ namespace Notebook.Migrations
                     b.Property<int>("NoteId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("NoteContent")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("NoteDate")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("NoteTitle")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");

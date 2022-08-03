@@ -4,16 +4,24 @@
 
 @model Notebook.Models.Note
 
+@using Notebook.Models;
+
 <h4>Add a new task</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Description)
-  @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.NoteTitle)
+  @Html.TextBoxFor(model => model.NoteTitle)
+  @Html.LabelFor(model => model.NoteContent)
+  @Html.TextBoxFor(model => model.NoteContent)
+  @Html.LabelFor(model => model.NoteDate)
+  @Html.TextBoxFor(model => model.NoteDate, new {@type= "date"})
 
-  @Html.Label("Select cateogry")
-  @Html.DropDownList("CategoryId")
+@* 
+  @Html.Label("Select Categories")
+  @Html.CheckBoxFor(model => Model.Name) *@
 
   <input type="submit" value="Add new note" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all notes", "Index")</p>
+

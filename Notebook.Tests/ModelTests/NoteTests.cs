@@ -92,33 +92,33 @@ namespace Notebook.Tests
     }
 
     [TestMethod]
-    public void GetDescription_ReturnsDescription_String()
+    public void GetNoteTitle_ReturnsNoteTitle_String()
     {
       //Arrange
       string description = "Walk the dog";
 
       //Act
       Note newNote = new Note(description);
-      string result = newNote.Description;
+      string result = newNote.NoteTitle;
 
       //Assert
       Assert.AreEqual(description, result);
     }
 
     [TestMethod]
-    public void SetDescription_SetDescription_String()
+    public void SetNoteTitle_SetNoteTitle_String()
     {
       //Arrange
       string description = "Walk the dog";
       Note newNote = new Note(description);
 
       //Act
-      string updatedDescription = "Do the dishes";
-      newNote.Description = updatedDescription;
-      string result = newNote.Description;
+      string updatedNoteTitle = "Do the dishes";
+      newNote.NoteTitle = updatedNoteTitle;
+      string result = newNote.NoteTitle;
 
       //Assert
-      Assert.AreEqual(updatedDescription, result);
+      Assert.AreEqual(updatedNoteTitle, result);
     }
 
     [TestMethod]

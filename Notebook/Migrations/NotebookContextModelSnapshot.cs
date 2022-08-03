@@ -57,7 +57,13 @@ namespace Notebook.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("NoteContent")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("NoteDate")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("NoteTitle")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("NoteId");
